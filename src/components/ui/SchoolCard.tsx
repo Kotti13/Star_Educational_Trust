@@ -27,17 +27,17 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
       </div>
       <div className="p-6">
         <div className="flex items-center mb-3">
-          <School className="text-orange-500 h-5 w-5 mr-2" />
+          <School className="text-blue-500 h-5 w-5 mr-2" />
           <h3 className="text-xl font-semibold text-gray-800">{name}</h3>
         </div>
         
         <div className="flex items-start mb-2">
-          <MapPin className="text-orange-500 h-5 w-5 mr-2 mt-1 flex-shrink-0" />
+          <MapPin className="text-blue-500 h-5 w-5 mr-2 mt-1 flex-shrink-0" />
           <p className="text-gray-600">{address}</p>
         </div>
         
         <div className="flex items-start mb-4">
-          <Phone className="text-orange-500 h-5 w-5 mr-2 mt-1 flex-shrink-0" />
+          <Phone className="text-blue-500 h-5 w-5 mr-2 mt-1 flex-shrink-0" />
           <div>
             {contacts.map((contact, index) => (
               <p key={index} className="text-gray-600">{contact}</p>
@@ -47,7 +47,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         
         <a 
           href={applicationFormUrl}
-          className="inline-flex items-center px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
+          className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
           download
         >
           <FileDown className="h-4 w-4 mr-2" />

@@ -6,8 +6,12 @@ import Carousel from '../components/ui/Carousel';
 import SectionTitle from '../components/ui/SectionTitle';
 import SchoolCard from '../components/ui/SchoolCard';
 
+import founderImage from '../assets/Arasakumar.jpg'
+
+import "../css/home.css"
+
 const carouselImages = [
-  "https://images.pexels.com/photos/8617566/pexels-photo-8617566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://i0.wp.com/littlestarintschool.in/wp-content/uploads/2021/07/banner.png?w=820&ssl=1",
   "https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/8617899/pexels-photo-8617899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -18,7 +22,7 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Carousel */}
-      <section>
+      <section className='carousel'>
         <Carousel images={carouselImages} />
       </section>
 
@@ -59,12 +63,12 @@ const Home: React.FC = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="bg-orange-50 py-16 px-4">
+      <section className="bg-blue-50 py-16 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="p-3 bg-orange-100 inline-block rounded-full mb-6">
-                <Eye className="h-6 w-6 text-orange-600" />
+              <div className="p-3 bg-blue-100 inline-block rounded-full mb-6">
+                <Eye className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
               <p className="text-gray-600">
@@ -73,8 +77,8 @@ const Home: React.FC = () => {
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="p-3 bg-orange-100 inline-block rounded-full mb-6">
-                <BookOpen className="h-6 w-6 text-orange-600" />
+              <div className="p-3 bg-blue-100 inline-block rounded-full mb-6">
+                <BookOpen className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
               <p className="text-gray-600">
@@ -93,9 +97,9 @@ const Home: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="md:col-span-1 flex justify-center">
-                <div className="w-48 h-48 bg-orange-100 rounded-full overflow-hidden mb-4">
+                <div className="w-48 h-48 bg-blue-100 rounded-full overflow-hidden mb-4">
                   <img 
-                    src="https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                    src={founderImage}
                     alt="B.T. Arasakumar" 
                     className="w-full h-full object-cover"
                   />
@@ -122,13 +126,13 @@ const Home: React.FC = () => {
           <div className="mt-12 flex flex-wrap justify-center gap-4">
             <Link 
               to="/gallery" 
-              className="inline-flex items-center px-6 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
             >
               Explore Our Campus
             </Link>
             <Link 
               to="/about" 
-              className="inline-flex items-center px-6 py-3 border border-orange-500 text-orange-500 rounded-md hover:bg-orange-50 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-blue-500 text-blue-500 rounded-md hover:bg-blue-50 transition-colors"
             >
               Learn More About Us
               <ChevronRight className="h-4 w-4 ml-1" />

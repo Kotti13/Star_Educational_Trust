@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Menu, X, School } from 'lucide-react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+import "../../css/navbar.css"
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,88 +25,61 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(false);
   };
 
-  const navbarClasses = `fixed w-full z-50 transition-all duration-300 ${
+  const handleHomeClick = () => {
+    navigate('/', { replace: true });
+    closeMenu(); // Also close mobile menu if open
+  };
+
+  const navbarClasses = `fixed bg-white w-full z-50 transition-all duration-300 ${
     isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
   }`;
+
+  const navLinks = [
+    { to: "/", label: "Home", onClick: handleHomeClick },
+    { to: "/about", label: "About Us" },
+    { to: "/facility", label: "Our Facility" },
+    { to: "/activities", label: "Curricular Activities" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/contact", label: "Contact Us" }
+  ];
 
   return (
     <nav className={navbarClasses}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <NavLink to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-          <School className="text-orange-600 h-8 w-8" />
+        <NavLink to="/" className="flex items-center space-x-2" onClick={handleHomeClick}>
+          <img 
+            src="https://littlestarintschool.in/wp-content/uploads/2021/07/little-star-international-school-1-e1625121318243.jpg" 
+            alt="" 
+            height={40} 
+            width={30} 
+          />
           <div>
-            <h1 className="text-orange-600 font-bold text-lg md:text-xl">STAR Educational Trust</h1>
-            <p className="text-xs text-orange-500 hidden md:block">Inspiring minds, shaping futures</p>
+            <h1 className="font-bold text-lg md:text-xl">STAR Educational Trust</h1>
+            <p className="text-xs text-black hidden md:block">Inspiring minds, shaping futures</p>
           </div>
         </NavLink>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => 
-              isActive 
-              ? "text-orange-600 font-medium" 
-              : "text-gray-700 hover:text-orange-500"
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink 
-            to="/about" 
-            className={({ isActive }) => 
-              isActive 
-              ? "text-orange-600 font-medium" 
-              : "text-gray-700 hover:text-orange-500"
-            }
-          >
-            About Us
-          </NavLink>
-          <NavLink 
-            to="/facility" 
-            className={({ isActive }) => 
-              isActive 
-              ? "text-orange-600 font-medium" 
-              : "text-gray-700 hover:text-orange-500"
-            }
-          >
-            Our Facility
-          </NavLink>
-          <NavLink 
-            to="/activities" 
-            className={({ isActive }) => 
-              isActive 
-              ? "text-orange-600 font-medium" 
-              : "text-gray-700 hover:text-orange-500"
-            }
-          >
-            Curricular Activities
-          </NavLink>
-          <NavLink 
-            to="/gallery" 
-            className={({ isActive }) => 
-              isActive 
-              ? "text-orange-600 font-medium" 
-              : "text-gray-700 hover:text-orange-500"
-            }
-          >
-            Gallery
-          </NavLink>
-          <NavLink 
-            to="/contact" 
-            className={({ isActive }) => 
-              isActive 
-              ? "text-orange-600 font-medium" 
-              : "text-gray-700 hover:text-orange-500"
-            }
-          >
-            Contact Us
-          </NavLink>
+          {navLinks.map(({ to, label, onClick }) => (
+            <NavLink 
+              key={to}
+              to={to}
+              onClick={onClick}
+              className={({ isActive }) => 
+                isActive 
+                  ? "text-blue-600 font-medium" 
+                  : "text-gray-700 hover:text-[#054c9f]"
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-gray-700 hover:text-orange-500 focus:outline-none"
+          className="md:hidden text-gray-700 hover:text-[#054c9f] focus:outline-none"
           onClick={toggleMenu}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -115,72 +90,20 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg animate-fade-in">
           <div className="flex flex-col space-y-4 px-4 py-6">
-            <NavLink 
-              to="/" 
-              className={({ isActive }) => 
-                isActive 
-                ? "text-orange-600 font-medium" 
-                : "text-gray-700 hover:text-orange-500"
-              }
-              onClick={closeMenu}
-            >
-              Home
-            </NavLink>
-            <NavLink 
-              to="/about" 
-              className={({ isActive }) => 
-                isActive 
-                ? "text-orange-600 font-medium" 
-                : "text-gray-700 hover:text-orange-500"
-              }
-              onClick={closeMenu}
-            >
-              About Us
-            </NavLink>
-            <NavLink 
-              to="/facility" 
-              className={({ isActive }) => 
-                isActive 
-                ? "text-orange-600 font-medium" 
-                : "text-gray-700 hover:text-orange-500"
-              }
-              onClick={closeMenu}
-            >
-              Our Facility
-            </NavLink>
-            <NavLink 
-              to="/activities" 
-              className={({ isActive }) => 
-                isActive 
-                ? "text-orange-600 font-medium" 
-                : "text-gray-700 hover:text-orange-500"
-              }
-              onClick={closeMenu}
-            >
-              Curricular Activities
-            </NavLink>
-            <NavLink 
-              to="/gallery" 
-              className={({ isActive }) => 
-                isActive 
-                ? "text-orange-600 font-medium" 
-                : "text-gray-700 hover:text-orange-500"
-              }
-              onClick={closeMenu}
-            >
-              Gallery
-            </NavLink>
-            <NavLink 
-              to="/contact" 
-              className={({ isActive }) => 
-                isActive 
-                ? "text-orange-600 font-medium" 
-                : "text-gray-700 hover:text-orange-500"
-              }
-              onClick={closeMenu}
-            >
-              Contact Us
-            </NavLink>
+            {navLinks.map(({ to, label, onClick }) => (
+              <NavLink 
+                key={to}
+                to={to}
+                onClick={onClick ?? closeMenu}
+                className={({ isActive }) => 
+                  isActive 
+                    ? "text-[#054c9f] font-medium" 
+                    : "text-gray-700 hover:text-[#054c9f]"
+                }
+              >
+                {label}
+              </NavLink>
+            ))}
           </div>
         </div>
       )}

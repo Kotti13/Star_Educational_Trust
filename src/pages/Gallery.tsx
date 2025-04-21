@@ -100,10 +100,10 @@ const Gallery: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <div className="bg-orange-500 text-white py-20 px-4">
+      <div className="bg-blue-50 text-white py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Gallery</h1>
-          <p className="max-w-3xl mx-auto text-lg">
+          <p className=" text-black max-w-3xl mx-auto text-lg">
             A glimpse into our vibrant campus life and activities.
           </p>
         </div>
@@ -125,8 +125,8 @@ const Gallery: React.FC = () => {
               onClick={() => setFilter(category)}
               className={`px-4 py-2 rounded-md transition-colors ${
                 filter === category 
-                  ? 'bg-orange-500 text-white' 
-                  : 'bg-white text-gray-700 border border-gray-300 hover:border-orange-400'
+                  ? 'bg-blue-500 text-white' 
+                  : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-400'
               }`}
             >
               {category}
@@ -170,7 +170,7 @@ const Gallery: React.FC = () => {
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fade-in">
           <button 
             onClick={closeLightbox}
-            className="absolute top-4 right-4 text-white hover:text-orange-400 transition-colors"
+            className="absolute top-4 right-4 text-white hover:text-blue-400 transition-colors"
             aria-label="Close lightbox"
           >
             <X size={32} />

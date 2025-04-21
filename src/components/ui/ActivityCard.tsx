@@ -8,8 +8,8 @@ interface ActivityCardProps {
 
 const ActivityCard: React.FC<ActivityCardProps> = ({ title, icon: Icon }) => {
   return (
-    <div className="bg-white p-5 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center space-x-3 hover:border-orange-200">
-      <div className="p-2 bg-orange-50 rounded-md text-orange-500 group-hover:bg-orange-100 transition-colors">
+    <div className="bg-white p-5 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center space-x-3 hover:border-blue-200">
+      <div className="p-2 bg-blue-50 rounded-md text-blue-500 group-hover:bg-blue-100 transition-colors">
         <Icon className="h-5 w-5" />
       </div>
       <h3 className="font-medium text-gray-800">{title}</h3>

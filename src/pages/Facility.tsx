@@ -7,10 +7,10 @@ const Facility: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <div className="bg-orange-500 text-white py-20 px-4">
+      <div className="bg-blue-50 text-white py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Facilities</h1>
-          <p className="max-w-3xl mx-auto text-lg">
+          <p className="max-w-3xl mx-auto text-lg text-black">
             State-of-the-art infrastructure to support holistic educational development.
           </p>
         </div>
@@ -69,7 +69,7 @@ const Facility: React.FC = () => {
       </div>
 
       {/* Image Showcase */}
-      <div className="bg-orange-50 py-16 px-4">
+      <div className="bg-blue-50 py-16 px-4">
         <div className="container mx-auto">
           <SectionTitle 
             title="Experience Our Campus" 

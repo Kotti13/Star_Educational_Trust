@@ -7,10 +7,10 @@ const Contact: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <div className="bg-orange-500 text-white py-20 px-4">
+      <div className="bg-blue-50 text-white py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
-          <p className="max-w-3xl mx-auto text-lg">
+          <p className="max-w-3xl mx-auto text-lg text-black">
             We'd love to hear from you. Reach out with any questions or inquiries.
           </p>
         </div>
@@ -29,13 +29,13 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Little Star International School</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <MapPin className="text-orange-500 h-5 w-5 mr-3 mt-1 flex-shrink-0" />
+                    <MapPin className="text-blue-500 h-5 w-5 mr-3 mt-1 flex-shrink-0" />
                     <p className="text-gray-600">
                       9/7B, KVR Nagar Main Road, Mangalam Rd, Erukkadu Extension, Tiruppur, Tamil Nadu 641604
                     </p>
                   </div>
                   <div className="flex items-center">
-                    <Phone className="text-orange-500 h-5 w-5 mr-3 flex-shrink-0" />
+                    <Phone className="text-blue-500 h-5 w-5 mr-3 flex-shrink-0" />
                     <p className="text-gray-600">9787555527, 9159785213</p>
                   </div>
                 </div>
@@ -46,13 +46,13 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Little Starr International School</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <MapPin className="text-orange-500 h-5 w-5 mr-3 mt-1 flex-shrink-0" />
+                    <MapPin className="text-blue-500 h-5 w-5 mr-3 mt-1 flex-shrink-0" />
                     <p className="text-gray-600">
                       Vetuvapalayam, Somanur Road, Mangalam, Tiruppur - 641 663
                     </p>
                   </div>
                   <div className="flex items-center">
-                    <Phone className="text-orange-500 h-5 w-5 mr-3 flex-shrink-0" />
+                    <Phone className="text-blue-500 h-5 w-5 mr-3 flex-shrink-0" />
                     <p className="text-gray-600">9585811112, 9585733334</p>
                   </div>
                 </div>
@@ -63,11 +63,11 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">General Inquiries</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <Mail className="text-orange-500 h-5 w-5 mr-3 flex-shrink-0" />
+                    <Mail className="text-blue-500 h-5 w-5 mr-3 flex-shrink-0" />
                     <p className="text-gray-600">info@stareducationaltrust.in</p>
                   </div>
                   <div className="flex items-center">
-                    <Clock className="text-orange-500 h-5 w-5 mr-3 flex-shrink-0" />
+                    <Clock className="text-blue-500 h-5 w-5 mr-3 flex-shrink-0" />
                     <p className="text-gray-600">Working Hours: 9:00 AM – 4:00 PM (Monday to Saturday)</p>
                   </div>
                 </div>

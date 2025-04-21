@@ -7,10 +7,10 @@ const Activities: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <div className="bg-orange-500 text-white py-20 px-4">
+      <div className="bg-blue-50 text-white py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Curricular Activities</h1>
-          <p className="max-w-3xl mx-auto text-lg">
+          <p className="max-w-3xl mx-auto text-lg text-black">
             Well-rounded development through a variety of extracurricular programs.
           </p>
         </div>
@@ -43,7 +43,7 @@ const Activities: React.FC = () => {
       </div>
       
       {/* Featured Activities */}
-      <div className="bg-orange-50 py-16 px-4">
+      <div className="bg-blue-50 py-16 px-4">
         <div className="container mx-auto">
           <SectionTitle 
             title="Featured Activities" 
@@ -103,7 +103,7 @@ const Activities: React.FC = () => {
         
         <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md mt-8">
           <table className="min-w-full">
-            <thead className="bg-orange-500 text-white">
+            <thead className="bg-blue-500 text-white">
               <tr>
                 <th className="py-3 px-4 text-left">Month</th>
                 <th className="py-3 px-4 text-left">Event</th>

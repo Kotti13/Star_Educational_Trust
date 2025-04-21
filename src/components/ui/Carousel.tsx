@@ -9,7 +9,7 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({ images, interval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto slide functionality
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -82,7 +82,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 5000 }) => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`h-2 rounded-full transition-all ${
-              index === currentIndex ? 'w-8 bg-orange-500' : 'w-2 bg-white/50'
+              index === currentIndex ? 'w-8 bg-blue-600' : 'w-2 bg-white/50'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

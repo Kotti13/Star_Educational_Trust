@@ -6,10 +6,10 @@ const About: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <div className="bg-orange-500 text-white py-20 px-4">
+      <div className="bg-blue-50 text-white py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">About STAR Educational Trust</h1>
-          <p className="max-w-3xl mx-auto text-lg">
+          <p className="max-w-3xl mx-auto text-lg text-black">
             A leading educational institution committed to nurturing young minds through quality education.
           </p>
         </div>
@@ -47,8 +47,8 @@ const About: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
-              <div className="p-3 bg-orange-100 inline-block rounded-full mb-6">
-                <Eye className="h-6 w-6 text-orange-600" />
+              <div className="p-3 bg-blue-100 inline-block rounded-full mb-6">
+                <Eye className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
               <p className="text-gray-600">
@@ -57,8 +57,8 @@ const About: React.FC = () => {
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
-              <div className="p-3 bg-orange-100 inline-block rounded-full mb-6">
-                <BookOpen className="h-6 w-6 text-orange-600" />
+              <div className="p-3 bg-blue-100 inline-block rounded-full mb-6">
+                <BookOpen className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
               <p className="text-gray-600">
@@ -75,7 +75,7 @@ const About: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="md:col-span-1 flex justify-center">
-                <div className="w-48 h-48 bg-orange-100 rounded-full overflow-hidden mb-4">
+                <div className="w-48 h-48 bg-blue-100 rounded-full overflow-hidden mb-4">
                   <img 
                     src="https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                     alt="B.T. Arasakumar" 
