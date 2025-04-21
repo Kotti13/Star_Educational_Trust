@@ -32,13 +32,14 @@ const About: React.FC = () => {
           </div>
 
           {/* Image */}
-          <div className="rounded-lg overflow-hidden shadow-md">
-            <img 
-              src="https://images.pexels.com/photos/8617546/pexels-photo-8617546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="STAR Educational Trust" 
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <div className="rounded-lg overflow-hidden shadow-md h-60">
+  <img 
+    src="https://img.freepik.com/free-vector/flat-background-international-day-education_23-2151062628.jpg?ga=GA1.1.2113263236.1745217660&semt=ais_hybrid&w=740" 
+    alt="STAR Educational Trust" 
+    className="w-full h-full object-cover"
+  />
+</div>
+
         </div>
 
         {/* Vision & Mission */}
